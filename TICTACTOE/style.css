@@ -1,0 +1,202 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: rgb(48, 48, 48);
+   
+}
+
+.screen{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.music{
+    cursor: pointer;
+    position: fixed;
+    right:30px;
+}
+
+.slash{
+    cursor: pointer;
+    position: fixed;
+    opacity: 1;
+    z-index: 4000;
+    font-size:70px;
+    top:8px;
+    right:40px;
+    color: rgb(218, 218, 93);
+}
+
+#confetti{
+    width: 0;
+    height: 0;
+}
+
+.header{ 
+    align-items: center;
+}
+
+.heading{
+    margin-bottom: 20px;
+    font-size: 36px;
+    color: black;
+    background-color: rgb(219, 206, 88);
+    padding: 10px 20px;
+    border: 1px solid black;
+    box-shadow: 4px 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.winnerBoard{
+    opacity: 0;
+    background-color: rgb(214, 214, 94);
+    position: fixed;
+    bottom: 200px;
+    right: 30px;
+    left: 30px;
+    height: 40vh;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 4px 4px;
+    transition: all 0.3s;
+}
+
+.heading:hover, .winnerBoard:hover{
+    box-shadow: 10px 10px ;
+}
+
+.restartButton{
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    background-color: white;
+    box-shadow: 2px 2px;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-bottom: 50px;
+}
+
+.restartButton:hover{
+    box-shadow: 8px 8px;
+}
+
+.game{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    row-gap: 4px;
+    column-gap: 4px;
+    z-index: 3000;
+}
+
+.block{
+    background-color: rgba(219, 206, 88, 0.795);
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 60px;
+    transition: all 0.3s;
+    color: rgba(0, 0, 0, 0.815);
+    transition: all 0.2s;
+}
+
+.block:hover{
+    background-color: rgba(0, 0, 0, 0.534);
+}
+
+.footer{
+    width: 100%;
+    position: fixed;
+    bottom:50px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(214, 214, 92);
+    padding: 20px 100px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 4px 4px;
+    transition: all 0.3s;
+    margin-top: 10px;
+}
+
+
+
+.footer-message{
+   margin-bottom: 10px;
+}
+
+.footer:hover{
+    background-color: black;
+    box-shadow: 10px 10px ;
+}
+
+.logo1{
+    height: 30px;
+    cursor: pointer;
+}
+
+.footer-logos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.findme{
+    margin-bottom: 4px;
+}
+
+@media (max-width:350px){
+    .footer-message{
+        opacity: 0;
+    }
+
+    .footer-message{
+        font-size: 1px;
+    }
+}
+
+@media (max-width:450px){
+    .block{
+        height: 70px;
+        width: 70px;
+    }
+
+    .heading{
+        font-size: 20px;
+    }
+
+    .music{
+        top:83px;
+        right:5px;
+    }
+
+    .slash{
+        top:70px;
+        right: 20px;
+    }
+
+
+}
+
+@media (max-height:700px) {
+    .footer{
+        bottom: 0px;
+    }
+}
+
+@media (max-height:660px) {
+    .footer{
+       position:static;
+    }
+}
